@@ -3,7 +3,12 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n'],
+  modules: [
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/image',
+  ],
   i18n: {
     strategy: 'prefix',
     langDir: 'locales',
@@ -25,5 +30,8 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
+  },
+  image: {
+    dir: 'assets/images',
   },
 });

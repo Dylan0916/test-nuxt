@@ -2,11 +2,6 @@
   <slot :test="123" />
 </template>
 <script setup lang="ts">
-const props = defineProps(['validateOnBlur', '']);
-
-console.log({
-  validateOnBlur: props.validateOnBlur,
-  validateOnChange: props.validateOnChange,
-});
+defineProps(['validateOnBlur', '']);
 </script>
 <style lang=""></style>

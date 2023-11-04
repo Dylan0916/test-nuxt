@@ -1,13 +1,7 @@
 <template>
   <div>Index</div>
-  <div>
-    {{ mainStore.counter }}
-    <button @click="mainStore.increment">+</button>
-    {{ data }}
-  </div>
-  <VeeForm :validateOnBlur="false" validateOnChange="false">
-    <h1>VeeForm,</h1>
-  </VeeForm>
+  <img src="@/assets/images/husky.webp" width="100" />
+  <NuxtImg fit="cover" width="200" height="100" src="/husky.webp" />
 
   <NuxtLink to="/about">To about page</NuxtLink>
   <br />
@@ -36,13 +30,14 @@ const { data } = useFetch(
 // }
 
 useSeoMeta({
-  title: 'About Page',
+  title: 'Index Page',
   description: 'this is index',
 });
-// useHead({
-//   title: 'About Page',
-//   meta: [{ name: 'description', content: 'this is index' }],
-// });
 </script>
 
-<style lang=""></style>
+<style scoped>
+.img-box {
+  width: 100px;
+  height: 200px;
+}
+</style>
