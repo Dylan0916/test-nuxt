@@ -1,36 +1,27 @@
 <template>
   <div>Index</div>
-  <img src="@/assets/images/husky.webp" width="100" />
-  <NuxtImg fit="cover" width="200" height="100" src="/husky.webp" />
-
-  <NuxtLink to="/about">To about page</NuxtLink>
+  <BaseButton />
+  <NuxtLinkLocale to="/about">To about page</NuxtLinkLocale>
   <br />
-  <NuxtLink to="/parent">To parent page</NuxtLink>
+  <NuxtLinkLocale to="/parent">To parent page</NuxtLinkLocale>
 </template>
 
 <script setup lang="ts">
-// import useCounter from '@/composables/useCounter';
-import useMainStore from '@/stores/useMainStore';
+import { getInfo } from '@/service';
+import { useTest } from '@/composables/useTest';
+const instance = getCurrentInstance();
 
-const mainStore = useMainStore();
+// await useTest();
 
-const { data } = useFetch(
-  'https://run.mocky.io/v3/a0da0e8e-f349-47ff-a8e8-e4e8eaa813c7',
-  { query: { id: mainStore.counter } }
-);
+// await getInfo();
 
-// definePageMeta({
-//   layout: 'main',
+// onMounted(() => {
+//   console.log('== onMounted ==');
+//   console.log(instance);
 // });
 
-// const counter = useCounter();
-
-// function clearCounter() {
-//   clearNuxtState('counter');
-// }
-
 useSeoMeta({
-  title: 'Index Page',
+  title: 'Index Page2',
   description: 'this is index',
 });
 </script>
