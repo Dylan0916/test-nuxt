@@ -12,13 +12,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.0.0-rc.3",
     "@nuxt/test-utils": "^3.8.0",
-    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/test-utils": "^2.4.1",
     "jsdom": "^22.1.0",
-    "nuxt": "^3.8.2",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.2",
     "vitest": "^0.34.6",
@@ -28,10 +25,13 @@
   },
   "dependencies": {
     "@css-render/vue3-ssr": "^0.15.12",
+    "@nuxt/image": "^1.1.0",
+    "@nuxtjs/i18n": "8.0.0-rc.6",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.2",
     "@pinia/nuxt": "^0.4.11",
     "cookie-universal-nuxt": "^2.2.2",
     "naive-ui": "2.35.0",
+    "nuxt": "^3.8.2",
     "pinia": "^2.1.6"
   }
 }
