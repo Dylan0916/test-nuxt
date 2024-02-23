@@ -32,6 +32,10 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    compilation: {
+      strictMessage: false,
+    },
+    lazy: true,
     strategy: 'prefix',
     langDir: 'locales',
     locales: [

@@ -1,24 +1,31 @@
 <template>
   <div>Index</div>
-  <BaseButton />
   <NuxtLinkLocale to="/about">To about page</NuxtLinkLocale>
   <br />
   <NuxtLinkLocale to="/parent">To parent page</NuxtLinkLocale>
+  <div>
+    <Trans
+      i18n-key="testKey"
+      :components="components"
+      :values="{ num: 1, food: 'apple' }"
+    />
+    <br />
+    <Trans
+      i18n-key="testKey2"
+      :components="components"
+      :values="[2, 'apple']"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { getInfo } from '@/service';
-import { useTest } from '@/composables/useTest';
-const instance = getCurrentInstance();
+import Trans from '@/components/Trans.vue';
+import TextContent from '@/components/TextContent.vue';
 
-// await useTest();
-
-// await getInfo();
-
-// onMounted(() => {
-//   console.log('== onMounted ==');
-//   console.log(instance);
-// });
+const components = computed(() => ({
+  b: { type: 'b' },
+  special: { type: TextContent },
+}));
 
 useSeoMeta({
   title: 'Index Page2',
