@@ -15,12 +15,12 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 });
 
-const nuxtApp = useNuxtApp();
+// const nuxtApp = useNuxtApp();
 
-nuxtApp.hook('page:start', () => {
-  console.log('== page start ==');
-});
-nuxtApp.hook('page:finish', () => {
-  console.log('== page finish ==');
-});
+// nuxtApp.hook('page:start', () => {
+//   console.log('== page start ==');
+// });
+// nuxtApp.hook('page:finish', () => {
+//   console.log('== page finish ==');
+// });
 </script>

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/image',
+    '@vueuse/nuxt',
   ],
   experimental: {
     inlineSSRStyles: false,
@@ -36,7 +37,7 @@ export default defineNuxtConfig({
       strictMessage: false,
     },
     lazy: true,
-    strategy: 'prefix',
+    strategy: 'no_prefix',
     langDir: 'locales',
     locales: [
       {
