@@ -36,6 +36,7 @@
     "cookie-universal-nuxt": "^2.2.2",
     "naive-ui": "2.35.0",
     "nuxt": "^3.11.2",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "vite-svg-loader": "^5.1.0"
   }
 }

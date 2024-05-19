@@ -1,35 +1,26 @@
+import svgLoader from 'vite-svg-loader'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  modules: [
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    '@nuxtjs/i18n',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-  ],
-  experimental: {
-    inlineSSRStyles: false,
-  },
+  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt'],
+  experimental: {},
   build: {
     transpile:
-      process.env.NODE_ENV === 'production'
-        ? [
-            'naive-ui',
-            'vueuc',
-            '@css-render/vue3-ssr',
-            '@juggle/resize-observer',
-          ]
-        : ['@juggle/resize-observer'],
+      process.env.NODE_ENV === 'production' ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'] : ['@juggle/resize-observer'],
   },
   vite: {
+    plugins: [
+      svgLoader({
+        svgoConfig: {
+          plugins: ['prefixIds'],
+        },
+      }),
+    ],
     optimizeDeps: {
-      include:
-        process.env.NODE_ENV === 'development'
-          ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone']
-          : [],
+      include: process.env.NODE_ENV === 'development' ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone'] : [],
     },
   },
   i18n: {
@@ -61,4 +52,4 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets/images',
   },
-});
+})
