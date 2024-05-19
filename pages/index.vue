@@ -1,6 +1,13 @@
 <template>
   <div>Index</div>
   <NuxtLink to="/zh">zh</NuxtLink>
+  <hr />
+  <NuxtImg
+    size="100%"
+    src="/husky.jpeg"
+    format="webp"
+    :placeholder="[500, 580, 10]"
+  />
 </template>
 
 <script setup lang="ts">
