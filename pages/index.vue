@@ -1,26 +1,28 @@
 <template>
   <div>Index</div>
-  <div class="box">
-    <p>1111</p>
-    <svg-icon :name="svgName" style="width: 28px" />
-    <svg-icon name="download" style="width: 28px" />
-    <p>22222</p>
-  </div>
-  <button @click="flag = !flag">Click</button>
-  <h3>{{ flag }}</h3>
+  <button @click="onClick">Click</button>
+  <button @click="onClick2">Click2</button>
 </template>
 
 <script setup lang="ts">
-import SvgIcon from '../components/svg-icon.vue'
+const router = useRouter()
 
-useSeoMeta({
-  title: 'Index Page2',
-  description: 'this is index',
-})
+const route = useRoute()
 
-const flag = ref(false)
+watch(
+  () => route,
+  (newRoute) => {
+    console.log(newRoute)
+  },
+  { deep: true, immediate: true }
+)
 
-const svgName = computed(() => flag.value ? 'arrow-up' : 'arrow-down')
+function onClick() {
+  router.push({ hash: '#page1' })
+}
+function onClick2() {
+  router.push({ hash: '#page2' })
+}
 </script>
 
 <style scoped>
