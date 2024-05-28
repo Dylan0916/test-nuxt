@@ -1,33 +1,14 @@
 <template>
   <div>Index</div>
-  <button @click="onClick">Click</button>
-  <button @click="onClick2">Click2</button>
+  <p class="red">red</p>
+  <p class="blue">blue</p>
+  <p class="other !text-pink-400">other</p>
 </template>
 
-<script setup lang="ts">
-const router = useRouter()
-
-const route = useRoute()
-
-watch(
-  () => route,
-  (newRoute) => {
-    console.log(newRoute)
-  },
-  { deep: true, immediate: true }
-)
-
-function onClick() {
-  router.push({ hash: '#page1' })
-}
-function onClick2() {
-  router.push({ hash: '#page2' })
-}
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
-.box {
-  display: flex;
-  align-items: center;
+.other {
+  @apply !text-7xl;
 }
 </style>

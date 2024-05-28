@@ -5,12 +5,13 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt'],
+  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@unocss/nuxt'],
   experimental: {},
   build: {
     transpile:
       process.env.NODE_ENV === 'production' ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'] : ['@juggle/resize-observer'],
   },
+  css: ['@/assets/styles/main.scss'],
   vite: {
     plugins: [
       svgLoader({
