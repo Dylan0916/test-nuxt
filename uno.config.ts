@@ -1,18 +1,8 @@
 import { defineConfig, transformerDirectives } from 'unocss'
-// import transformerDirectives from '@unocss/transformer-directives'
+
+const cssIdRE = /\.(css|postcss|sass|scss|less|stylus|styl)($|\?)/
 
 export default defineConfig({
-  content: {
-    pipeline: {
-      include: [
-        // the default
-        /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html|scss|css)($|\?)/,
-        // include js/ts files
-        'src/**/*.{js,ts}',
-      ],
-      // exclude files
-      // exclude: []
-    },
-  },
-  transformers: [transformerDirectives({ enforce: 'pre' })],
+  // content: { pipeline: { include: [], exclude: [/assets/styles/mainscss] } },
+  transformers: [transformerDirectives()],
 })
