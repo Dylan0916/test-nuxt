@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@unocss/nuxt'],
+  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@unocss/nuxt', '@vee-validate/nuxt'],
   experimental: {},
   build: {
     transpile:
