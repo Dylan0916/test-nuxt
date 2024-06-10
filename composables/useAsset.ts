@@ -6,7 +6,7 @@
 const assets = import.meta.glob<Component>('~/assets/**/*.svg', {
   import: 'default',
 })
+
 export function useAsset(path: ComputedRef<string>): any {
   return computed(() => defineAsyncComponent(assets[`/assets/${path.value}`]))
-  // return computed(() => assets[`/assets/${path.value}`])
 }

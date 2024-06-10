@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-const links = ['unocss-with-scss-issue', 'vee-validate']
+const links = ['unocss-with-scss-issue', 'vee-validate', 'svg-before', 'svg-after']
 </script>
 
 <style scoped lang="scss"></style>
