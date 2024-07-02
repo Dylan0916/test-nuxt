@@ -12,7 +12,8 @@
         <p class="m-0 opacity-0">$</p>
       </div>
       <n-slider v-model:value="value" range :marks="marks" step="mark" />
-      {{ value }}
+      <p>{{ value }}</p>
+      <p>{{ formattedValue }}</p>
     </n-space>
   </div>
 </template>
@@ -48,15 +49,25 @@ const options = [
   },
 ]
 
-const value = ref([0, 3000])
+const value = ref([0, 100])
 
 const marks = computed(() => {
   const len = options.length
   const step = 100 / (len - 1)
   const list = new Array(len).fill('')
 
-  return list.reduce((acc, _cur, index) => ({ ...acc, [index * step]: '$'.repeat(index + 1) }), {})
+  return list.reduce((acc, _cur, index) => ({ ...acc, [index * step]: index }), {})
 })
 
-console.log(marks.value)
+const formattedValue = computed(() => {
+  const [min, max] = value.value
+  const minIndex = marks.value[min]
+  const maxIndex = marks.value[max]
+  const minOption = options[minIndex]
+  const maxOption = options[maxIndex]
+  const minPrice = minOption.min
+  const maxPrice = maxIndex === options.length - 1 ? maxOption.min : maxOption.max
+
+  return `HKD ${minPrice} ~ HKD ${maxPrice}`
+})
 </script>
