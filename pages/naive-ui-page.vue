@@ -9,9 +9,6 @@
     <n-space vertical justify="center" class="w-50% ml-5">
       <div class="relative py-2 left-9px w-[calc(100%-18px)]">
         <p v-for="n in 5" :key="n" class="absolute m-0 -translate-x-1/2" :style="{ left: `${(n - 1) * 25}%` }">{{ '$'.repeat(n) }}</p>
-        <!-- <p v-for="n in 5" :key="n" class="opacity-0 relative translate-x-1/2" :class="{ 'translate-x-1/2': n !== 1 && n !== 5 }">
-          {{ '$'.repeat(n) }}
-        </p> -->
         <p class="m-0 opacity-0">$</p>
       </div>
       <n-slider v-model:value="value" range :marks="marks" step="mark" />
