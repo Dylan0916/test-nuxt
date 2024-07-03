@@ -11,9 +11,9 @@
         <p v-for="n in 5" :key="n" class="absolute m-0 -translate-x-1/2" :style="{ left: `${(n - 1) * 25}%` }">{{ '$'.repeat(n) }}</p>
         <p class="m-0 opacity-0">$</p>
       </div>
-      <n-slider v-model:value="value" range :marks="marks" step="mark" />
+      <n-slider v-model:value="value" range :max="4" :marks="marks2" step="mark" />
       <p>{{ value }}</p>
-      <p>{{ formattedValue }}</p>
+      <!-- <p>{{ formattedValue }}</p> -->
     </n-space>
   </div>
 </template>
@@ -49,7 +49,7 @@ const options = [
   },
 ]
 
-const value = ref([0, 100])
+const value = ref([0, 4])
 
 const marks = computed(() => {
   const len = options.length
@@ -57,6 +57,13 @@ const marks = computed(() => {
   const list = new Array(len).fill('')
 
   return list.reduce((acc, _cur, index) => ({ ...acc, [index * step]: index }), {})
+})
+
+const marks2 = computed(() => {
+  const len = options.length
+  const list = new Array(len).fill('')
+
+  return list.reduce((acc, _cur, index) => ({ ...acc, [index]: index }), {})
 })
 
 const formattedValue = computed(() => {
