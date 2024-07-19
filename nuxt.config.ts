@@ -28,6 +28,13 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: process.env.NODE_ENV === 'development' ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone'] : [],
     },
+    // $client: {
+    //   server: {
+    //     hmr: {
+    //       protocol: 'test123',
+    //     },
+    //   },
+    // },
   },
 
   i18n: {
