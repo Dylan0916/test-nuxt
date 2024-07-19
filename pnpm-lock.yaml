@@ -56,9 +56,6 @@ importers:
       nuxt:
         specifier: ^3.12.4
         version: 3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.11)(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.1)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.3)(vite@5.3.4(@types/node@20.14.11)(sass@1.77.8)(terser@5.31.3))(vue-tsc@2.0.26(typescript@5.5.3))
-      nuxtjs-naive-ui:
-        specifier: ^1.0.2
-        version: 1.0.2(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.32(typescript@5.5.3))
       pinia:
         specifier: ^2.1.7
         version: 2.1.7(typescript@5.5.3)(vue@3.4.32(typescript@5.5.3))
@@ -3772,9 +3769,6 @@ packages:
         optional: true
       '@types/node':
         optional: true
-
-  nuxtjs-naive-ui@1.0.2:
-    resolution: {integrity: sha512-qJ5ZKTEQieNaSNJFHdRCCz9SOLRB7Rg0vwzFJe64WYKt+SzDM2sQ7ZXj2raJzyIPBtKInQv6yDo2vvSBsLiUHA==}
 
   nwsapi@2.2.12:
     resolution: {integrity: sha512-qXDmcVlZV4XRtKFzddidpfVP4oMSGhga+xdMc25mv8kaLUHtgzCDhUxkrN8exkGdTlLNaXj7CV3GtON7zuGZ+w==}
@@ -9942,16 +9936,6 @@ snapshots:
       - vti
       - vue-tsc
       - xml2js
-
-  nuxtjs-naive-ui@1.0.2(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.32(typescript@5.5.3)):
-    dependencies:
-      '@css-render/vue3-ssr': 0.15.14(vue@3.4.32(typescript@5.5.3))
-      '@nuxt/kit': 3.12.3(magicast@0.3.4)(rollup@4.18.1)
-    transitivePeerDependencies:
-      - magicast
-      - rollup
-      - supports-color
-      - vue
 
   nwsapi@2.2.12: {}
 

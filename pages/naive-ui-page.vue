@@ -1,12 +1,23 @@
 <template>
   <div>
-    <NInput v-for="(_, index) in inputs" :key="index" v-model:value="inputs[index]" ref="inputRefs" @focus="handleFocus(index)" />
+    <NInput v-for="(_, index) in inputs" :key="index" v-model:value="inputs[index]" class="max-w-50%" ref="inputRefs" @focus="handleFocus(index)" />
     <h3>{{ inputs }}</h3>
+    <hr />
+    <div class="skeleton-card w-50%">
+      <n-skeleton class="w-360px h-135px rounded" />
+      <n-skeleton class="mt-2 rounded" text />
+      <n-skeleton class="mt-2 rounded w-60%" text />
+    </div>
+    <div class="skeleton-card w-50%">
+      <n-skeleton class="w-360px h-135px rounded" />
+      <n-skeleton class="mt-2 rounded" text />
+      <n-skeleton class="mt-2 rounded w-60%" text />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { NTabs, NTabPane, NInput, NSpace, NSlider } from 'naive-ui'
+import { NTabs, NTabPane, NInput, NSpace, NSlider, NSkeleton } from 'naive-ui'
 
 const inputs = reactive(['', '', '', ''])
 const inputRefs = ref<(typeof NInput)[]>([])

@@ -6,16 +6,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  modules: [
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-    '@nuxtjs/i18n',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@vee-validate/nuxt',
-    "nuxtjs-naive-ui"
-  ],
+  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@unocss/nuxt', '@vee-validate/nuxt'],
 
   experimental: {},
 

@@ -41,7 +41,6 @@
     "micromatch": "^4.0.7",
     "naive-ui": "2.39.0",
     "nuxt": "^3.12.4",
-    "nuxtjs-naive-ui": "^1.0.2",
     "pinia": "^2.1.7",
     "postcss": "^8.4.39",
     "postcss-import": "^16.1.0",
