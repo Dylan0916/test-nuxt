@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
@@ -15,12 +16,16 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
     "nuxtjs-naive-ui"
   ],
+
   experimental: {},
+
   build: {
     transpile:
       process.env.NODE_ENV === 'production' ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer'] : ['@juggle/resize-observer'],
   },
+
   css: ['@/assets/styles/main.scss'],
+
   vite: {
     plugins: [
       svgLoader({
@@ -33,6 +38,7 @@ export default defineNuxtConfig({
       include: process.env.NODE_ENV === 'development' ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone'] : [],
     },
   },
+
   i18n: {
     compilation: {
       strictMessage: false,
@@ -59,7 +65,10 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
   },
+
   image: {
     dir: 'assets/images',
   },
+
+  compatibilityDate: '2024-07-19',
 })
