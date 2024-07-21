@@ -8,8 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --cache --cache-strategy content --cache-location ./.cache/eslint/.eslintcache",
+    "lint:fix": "pnpm run lint --fix",
     "test": "vitest"
   },
   "devDependencies": {
