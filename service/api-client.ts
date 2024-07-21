@@ -12,7 +12,7 @@ export const createApiClient = (options?: FetchOptions) => {
     },
     // onRequestError({ request, options, error }) {},
     // onResponse({ request, options, response }) {},
-    onResponseError(context) {},
+    onResponseError(_context) {},
     ...options,
   })
 }

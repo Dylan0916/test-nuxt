@@ -1,6 +1,8 @@
 <template>
-  <div>Index</div>
-  <nuxt-link v-for="link in links" :key="link" :to="`/${link}`" class="block">{{ link }}</nuxt-link>
+  <div>
+    <div>Index</div>
+    <nuxt-link v-for="link in links" :key="link" :to="`/${link}`" class="block">{{ link }}</nuxt-link>
+  </div>
 </template>
 
 <script setup lang="ts">
