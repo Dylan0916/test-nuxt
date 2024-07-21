@@ -46,7 +46,7 @@ function sleep(time: number) {
   return promise
 }
 
-const onSubmit = handleSubmit(async values => {
+const onSubmit = handleSubmit(async _values => {
   isLoading.value = true
   await sleep(2000)
   isLoading.value = false

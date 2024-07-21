@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { NTabs, NTabPane, NInput, NSpace, NSlider, NSkeleton } from 'naive-ui'
+import { NInput, NSkeleton } from 'naive-ui'
 
 const inputs = reactive(['', '', '', ''])
 const inputRefs = ref<(typeof NInput)[]>([])

@@ -1,8 +1,10 @@
 <template>
-  <button @click="handleLogin">Login</button>
-  <button @click="handleOtherAPI">cookie test</button>
+  <div>
+    <button @click="handleLogin">Login</button>
+    <button @click="handleOtherAPI">cookie test</button>
 
-  <NuxtLinkLocale to="/private">To private page</NuxtLinkLocale>
+    <NuxtLinkLocale to="/private">To private page</NuxtLinkLocale>
+  </div>
 </template>
 
 <script setup lang="ts">
