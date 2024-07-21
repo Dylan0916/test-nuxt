@@ -5,5 +5,5 @@ export default defineNuxtPlugin(({ $pinia }) => {
     provide: {
       //   store: useMainStore($pinia),
     },
-  };
-});
+  }
+})

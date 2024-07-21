@@ -13,7 +13,7 @@ useSeoMeta({
   ogDescription: 'Hello this is my site.',
   ogImage: 'https://mysite/image.png',
   twitterCard: 'summary_large_image',
-});
+})
 
 // const nuxtApp = useNuxtApp();
 

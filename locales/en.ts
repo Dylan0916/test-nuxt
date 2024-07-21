@@ -5,4 +5,4 @@ export default {
     title: 'About Us',
     description: 'This is About Page',
   },
-};
+}

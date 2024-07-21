@@ -5,11 +5,11 @@
 <script lang="ts" setup>
 definePageMeta({
   middleware: ['check-lang'],
-});
+})
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 onMounted(() => {
-  console.log(t('welcome'));
-});
+  console.log(t('welcome'))
+})
 </script>

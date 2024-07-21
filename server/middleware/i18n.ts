@@ -1,4 +1,4 @@
-export default defineEventHandler(async (_event) => {
+export default defineEventHandler(async _event => {
   // const { url } = event.node.req;
   // const routeLocale = url?.replace('/', '') || '';
   // const locale = getCookie(event, 'i18n_redirected');
@@ -6,4 +6,4 @@ export default defineEventHandler(async (_event) => {
   // if (locale !== routeLocale && routeLocale) {
   //   setCookie(event, 'i18n_redirected', routeLocale);
   // }
-});
+})

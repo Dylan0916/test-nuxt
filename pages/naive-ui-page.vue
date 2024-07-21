@@ -23,7 +23,7 @@ const inputs = reactive(['', '', '', ''])
 const inputRefs = ref<(typeof NInput)[]>([])
 
 function handleFocus(index: number) {
-  const foundFirstEmptyIndex = inputs.findIndex((v) => !v)
+  const foundFirstEmptyIndex = inputs.findIndex(v => !v)
   const focusIndex = foundFirstEmptyIndex === -1 ? inputRefs.value.length - 1 : foundFirstEmptyIndex
 
   if (focusIndex !== index) {

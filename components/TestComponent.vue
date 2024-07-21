@@ -7,22 +7,22 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ count: number }>();
+defineProps<{ count: number }>()
 
-const msg = ref('123');
+const msg = ref('123')
 
 function changeMsg() {
-  msg.value += '!';
+  msg.value += '!'
 }
 
 definePageMeta({
   layout: 'main',
-});
+})
 
 useSeoMeta({
   title: 'Test Page',
   description: 'this is desc',
-});
+})
 </script>
 
 <style></style>

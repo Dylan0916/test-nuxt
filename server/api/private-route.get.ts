@@ -1,4 +1,4 @@
-import { getCookie } from '@/utils';
+import { getCookie } from '@/utils'
 
 export default defineEventHandler(async () => {
   const resp = await $fetch.raw('http://localhost:3001/api/private-route', {
@@ -6,7 +6,7 @@ export default defineEventHandler(async () => {
     headers: {
       cookie: getCookie(),
     },
-  });
+  })
 
-  return resp;
-});
+  return resp
+})

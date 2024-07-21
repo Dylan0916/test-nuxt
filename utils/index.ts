@@ -1,9 +1,9 @@
-let _cookie = '';
+let _cookie = ''
 
 export function setCookie(cookie: string) {
-  _cookie = cookie;
+  _cookie = cookie
 }
 
 export function getCookie() {
-  return _cookie;
+  return _cookie
 }
