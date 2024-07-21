@@ -50,9 +50,12 @@ importers:
       cookie-universal-nuxt:
         specifier: ^2.2.2
         version: 2.2.2
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.7.0)
       eslint-plugin-prettier:
         specifier: ^5.2.1
-        version: 5.2.1(@types/eslint@8.56.10)(eslint@9.7.0)(prettier@3.3.3)
+        version: 5.2.1(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@9.7.0))(eslint@9.7.0)(prettier@3.3.3)
       eslint-plugin-vue:
         specifier: ^9.27.0
         version: 9.27.0(eslint@9.7.0)
@@ -2790,6 +2793,12 @@ packages:
 
   eslint-config-flat-gitignore@0.1.8:
     resolution: {integrity: sha512-OEUbS2wzzYtUfshjOqzFo4Bl4lHykXUdM08TCnYNl7ki+niW4Q1R0j0FDFDr0vjVsI5ZFOz5LvluxOP+Ew+dYw==}
+
+  eslint-config-prettier@9.1.0:
+    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
 
   eslint-flat-config-utils@0.2.5:
     resolution: {integrity: sha512-iO+yLZtC/LKgACerkpvsZ6NoRVB2sxT04mOpnNcEM1aTwKy+6TsT46PUvrML4y2uVBS6I67hRCd2JiKAPaL/Uw==}
@@ -9238,6 +9247,10 @@ snapshots:
       find-up-simple: 1.0.0
       parse-gitignore: 2.0.0
 
+  eslint-config-prettier@9.1.0(eslint@9.7.0):
+    dependencies:
+      eslint: 9.7.0
+
   eslint-flat-config-utils@0.2.5:
     dependencies:
       '@types/eslint': 8.56.10
@@ -9284,7 +9297,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-prettier@5.2.1(@types/eslint@8.56.10)(eslint@9.7.0)(prettier@3.3.3):
+  eslint-plugin-prettier@5.2.1(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@9.7.0))(eslint@9.7.0)(prettier@3.3.3):
     dependencies:
       eslint: 9.7.0
       prettier: 3.3.3
@@ -9292,6 +9305,7 @@ snapshots:
       synckit: 0.9.1
     optionalDependencies:
       '@types/eslint': 8.56.10
+      eslint-config-prettier: 9.1.0(eslint@9.7.0)
 
   eslint-plugin-regexp@2.6.0(eslint@9.7.0):
     dependencies:

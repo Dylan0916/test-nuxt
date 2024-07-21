@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NInput v-for="(_, index) in inputs" :key="index" v-model:value="inputs[index]" class="max-w-50%" ref="inputRefs" @focus="handleFocus(index)" />
+    <NInput v-for="(_, index) in inputs" :key="index" ref="inputRefs" v-model:value="inputs[index]" class="max-w-50%" @focus="handleFocus(index)" />
     <h3>{{ inputs }}</h3>
     <hr />
     <div class="skeleton-card w-50%">

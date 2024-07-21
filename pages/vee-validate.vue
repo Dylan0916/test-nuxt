@@ -1,10 +1,10 @@
 <template>
   <div>
     <form v-show="type === 1" @submit="onSubmit">
-      <input name="email" v-model="email" type="email" />
+      <input v-model="email" name="email" type="email" />
       <span>{{ errors.email }}</span>
       <hr />
-      <input name="password" v-model="password" type="password" />
+      <input v-model="password" name="password" type="password" />
       <span>{{ errors.password }}</span>
       <hr />
       <button :disabled="isLoading">Submit{{ isLoading ? ' (loading...)' : '' }}</button>
