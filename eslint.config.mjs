@@ -35,7 +35,7 @@ export default createConfigForNuxt({}, ...pluginVue.configs['flat/recommended'],
     ],
     camelcase: 'off',
     'comma-dangle': ['warn', 'only-multiline'],
-    'generator-star-spacing': 'off',
+    'generator-star-spacing': 'off', // generator function 的空格規則
     'import/no-named-as-default-member': 'off',
     indent: 'off',
     'no-console': [
@@ -44,15 +44,20 @@ export default createConfigForNuxt({}, ...pluginVue.configs['flat/recommended'],
         allow: ['info', 'log', 'warn', 'error', 'group', 'groupEnd'],
       },
     ],
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-prototype-builtins': 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off', // prod 不允許 debugger
+    'no-prototype-builtins': 'off', // 不允許直接在 Object 上使用 prototype 的 methods
     'nuxt/no-cjs-in-config': 'off',
     'object-shorthand': 0,
-    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+    'prefer-promise-reject-errors': [
+      'error',
+      {
+        allowEmptyReject: true, // 允許空的 reject
+      },
+    ],
     'prettier/prettier': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
     'space-before-function-paren': [
-      'warn',
+      'warn', // function 的括號前面是要有空格
       {
         anonymous: 'always',
         named: 'never',
@@ -60,8 +65,8 @@ export default createConfigForNuxt({}, ...pluginVue.configs['flat/recommended'],
       },
     ],
     'template-curly-spacing': 'off',
-    'vue/attribute-hyphenation': 'off',
-    'vue/first-attribute-linebreak': 'off',
+    'vue/attribute-hyphenation': 'off', // attr 必須用連字符
+    'vue/first-attribute-linebreak': 'off', // 多個 attr 的換行規則
     'vue/html-indent': [
       'error',
       2,
@@ -74,11 +79,11 @@ export default createConfigForNuxt({}, ...pluginVue.configs['flat/recommended'],
       },
     ],
     'vue/max-attributes-per-line': 'off',
-    'vue/multi-word-component-names': 'off',
-    'vue/no-mutating-props': 'off',
+    'vue/multi-word-component-names': 'off', // Vue Components 命名必須要多個單字
+    'vue/no-mutating-props': 'off', // 不允許直接修改 props 值
     'vue/no-v-html': 0,
-    'vue/require-default-prop': 'off',
+    'vue/require-default-prop': 'off', // Vue Props 是否必須有 default
     'vue/singleline-html-element-content-newline': 'off',
-    'vue/v-slot-style': 'off',
+    'vue/v-slot-style': 'off', // Vue Slot 使用規則
   },
 })
