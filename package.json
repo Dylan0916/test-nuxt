@@ -16,11 +16,11 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/test-utils": "^2.4.6",
     "imagemin-cli": "^8.0.0",
-    "jsdom": "^24.1.0",
+    "jsdom": "^24.1.1",
     "unplugin-auto-import": "^0.18.0",
     "unplugin-vue-components": "^0.27.3",
     "vitest": "^2.0.3",
-    "vue": "^3.4.32",
+    "vue": "^3.4.33",
     "vue-router": "^4.4.0",
     "vue-tsc": "^2.0.26"
   },
