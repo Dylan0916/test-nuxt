@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-const links = ['unocss-with-scss-issue', 'vee-validate', 'svg-before', 'svg-after', 'naive-ui-page']
+const links = ['unocss-with-scss-issue', 'vee-validate', 'svg-before', 'svg-after', 'naive-ui-page', 'test-page']
 </script>
 
 <style scoped lang="scss"></style>
