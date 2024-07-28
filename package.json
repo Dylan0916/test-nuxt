@@ -31,7 +31,7 @@
     "@css-render/vue3-ssr": "^0.15.14",
     "@nuxt/eslint-config": "^0.3.13",
     "@nuxt/image": "^1.7.0",
-    "@nuxtjs/i18n": "^8.3.2",
+    "@nuxtjs/i18n": "^8.3.3",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@pinia/nuxt": "^0.5.2",
     "@unocss/nuxt": "^0.61.6",
