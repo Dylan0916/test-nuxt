@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-const links = ['unocss-with-scss-issue', 'vee-validate', 'svg-before', 'svg-after', 'naive-ui-page', 'test-page']
+const links = ['unocss-with-scss-issue', 'vee-validate', 'svg-before', 'svg-after', 'naive-ui-page', 'test-page', 'date-fns']
 
 function onClick() {
   console.log(window.history.state)
