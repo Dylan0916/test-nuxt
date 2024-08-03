@@ -1,5 +1,9 @@
 @import './other.scss';
 
+html,body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Tahoma, Arial, '文泉驛正黑', 'WenQuanYi Zen Hei', 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', '新細明體', PMingLiU, sans-serif;
+}
+
 .red {
   @apply text-6xl text-red-600;
 }

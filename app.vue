@@ -24,3 +24,13 @@ useSeoMeta({
 //   console.log('== page finish ==');
 // });
 </script>
+
+<style lang="scss">
+a {
+  @apply text-blue-500 w-fit text-lg;
+}
+
+button {
+  @apply bg-gray-400 text-white py-2 px-4 rounded;
+}
+</style>

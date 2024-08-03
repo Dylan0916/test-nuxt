@@ -17,6 +17,13 @@ export default defineNuxtConfig({
 
   css: ['@/assets/styles/main.scss'],
 
+  unocss: {
+    // https://github.com/unocss/unocss/blob/main/packages/nuxt/src/types.ts
+    preflight: true,
+    components: false,
+    uno: false,
+  },
+
   vite: {
     plugins: [
       svgLoader({
@@ -26,7 +33,10 @@ export default defineNuxtConfig({
       }),
     ],
     optimizeDeps: {
-      include: process.env.NODE_ENV === 'development' ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone'] : [],
+      include:
+        process.env.NODE_ENV === 'development'
+          ? ['naive-ui', 'vueuc', 'date-fns', 'date-fns-tz/formatInTimeZone', 'vee-validate', 'zod', '@vee-validate/zod']
+          : [],
     },
     // $client: {
     //   server: {
