@@ -6,7 +6,17 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/i18n', '@nuxt/image', '@vueuse/nuxt', '@unocss/nuxt', '@vee-validate/nuxt'],
+  modules: [
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@vee-validate/nuxt',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+  ],
 
   experimental: {},
 
@@ -76,6 +86,13 @@ export default defineNuxtConfig({
 
   image: {
     dir: 'assets/images',
+  },
+
+  robots: {},
+
+  sitemap: {
+    // sitemaps: true,
+    sitemapName: 'sitemap_index2.xml',
   },
 
   compatibilityDate: '2024-07-19',

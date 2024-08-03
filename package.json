@@ -32,6 +32,8 @@
     "@nuxt/eslint-config": "^0.3.13",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.3.3",
+    "@nuxtjs/robots": "4.0.2",
+    "@nuxtjs/sitemap": "6.0.0-beta.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@pinia/nuxt": "^0.5.2",
     "@unocss/nuxt": "^0.61.9",
