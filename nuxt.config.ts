@@ -18,7 +18,9 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
   ],
 
-  experimental: {},
+  experimental: {
+    viewTransition: true,
+  },
 
   build: {
     transpile:
