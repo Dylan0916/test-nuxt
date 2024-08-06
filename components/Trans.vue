@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { Fragment } from 'vue'
-import { type NamedValue } from 'vue-i18n'
+import type { NamedValue } from 'vue-i18n'
 
 type Components = {
   type: string | Component
